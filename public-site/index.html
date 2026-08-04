@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>동아리 감사 자동화 도구 | Portfolio Case Study</title>
+  <meta name="description" content="은행 거래내역, 엑셀 장부, 영수증 이미지를 활용해 동아리 회계감사 제출물을 자동화한 로컬 웹앱 프로젝트입니다." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="동아리 감사 자동화 도구 홈">
+      <span class="brand-mark">A</span>
+      <span>AuditFlow</span>
+    </a>
+    <nav aria-label="주요 섹션">
+      <a href="#problem">문제</a>
+      <a href="#solution">솔루션</a>
+      <a href="#features">기능</a>
+      <a href="#security">보안</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Local-first automation for club accounting audit</p>
+        <h1>반복적인 회계감사 제출 작업을 파일 업로드 한 번으로 정리합니다.</h1>
+        <p class="lead">
+          은행 PDF 거래내역서, 엑셀 장부 양식, 영수증 사진을 로컬 웹앱에서 처리해
+          감사 제출용 엑셀과 지출증빙 PDF를 자동 생성하는 프로젝트입니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#features">기능 보기</a>
+          <a class="button ghost" href="#security">보안 설계</a>
+        </div>
+      </div>
+      <div class="product-card" aria-label="제품 요약 카드">
+        <div class="window-bar"><span></span><span></span><span></span></div>
+        <div class="pipeline">
+          <div>
+            <strong>Input</strong>
+            <p>Bank PDF · Excel template · Receipt images</p>
+          </div>
+          <div class="arrow">→</div>
+          <div>
+            <strong>Automation</strong>
+            <p>Parsing · Matching · Evidence memo</p>
+          </div>
+          <div class="arrow">→</div>
+          <div>
+            <strong>Output</strong>
+            <p>Filled workbook · Evidence PDF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section section-grid compact">
+      <div>
+        <p class="eyebrow">Problem</p>
+        <h2>감사 제출은 단순하지만, 사람이 하기엔 실수가 나기 쉽습니다.</h2>
+      </div>
+      <div class="body-copy">
+        <p>
+          동아리 회계감사에는 은행 발급 거래내역서, 엑셀 거래내역서, 지출증빙자료가 함께 필요합니다.
+          거래를 하나씩 옮기고 영수증을 번호별로 정리하는 과정은 반복적이고, 번호·날짜·금액이 어긋나기 쉽습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="solution" class="section">
+      <p class="eyebrow">Solution</p>
+      <h2>공개 소개 페이지와 비공개 실행 도구를 분리했습니다.</h2>
+      <div class="split-cards">
+        <article class="card public">
+          <span class="tag">Public</span>
+          <h3>포트폴리오 소개 페이지</h3>
+          <p>문제정의, 자동화 흐름, 기술스택, 보안 설계를 공개합니다. 실제 회계자료 업로드 기능은 포함하지 않습니다.</p>
+        </article>
+        <article class="card private">
+          <span class="tag">Private</span>
+          <h3>로컬 실행 웹앱</h3>
+          <p>민감한 PDF와 엑셀은 사용자의 PC에서만 처리합니다. 결과 파일을 내려받고, 원본 업로드 파일은 서버에 저장하지 않습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <p class="eyebrow">Features</p>
+      <h2>자동화 범위</h2>
+      <div class="feature-grid">
+        <article class="feature">
+          <span>01</span>
+          <h3>거래내역 자동 입력</h3>
+          <p>카카오뱅크·토스뱅크 PDF에서 날짜, 거래 상대, 입금, 출금, 잔액을 추출해 엑셀 양식에 채웁니다.</p>
+        </article>
+        <article class="feature">
+          <span>02</span>
+          <h3>감사 비고 보완</h3>
+          <p>지출증빙 PDF의 번호·항목명·날짜를 읽어 출금 거래와 연결하고, 제출 전 확인이 필요한 항목을 표시합니다.</p>
+        </article>
+        <article class="feature">
+          <span>03</span>
+          <h3>지출증빙 PDF 생성</h3>
+          <p>영수증 사진과 항목 정보를 입력하면 A4 세로 증빙자료 PDF를 자동으로 구성합니다.</p>
+        </article>
+        <article class="feature">
+          <span>04</span>
+          <h3>검산용 보조 시트</h3>
+          <p>원문 거래내역, 증빙 목록, 요약 시트를 함께 만들어 감사자가 빠르게 대조할 수 있게 합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="security" class="section security-panel">
+      <p class="eyebrow">Security & Privacy</p>
+      <h2>실제 자료는 공개 저장소에 올리지 않는 구조입니다.</h2>
+      <ul class="checks">
+        <li>실제 PDF, XLSX, 영수증 이미지는 GitHub 제외 대상</li>
+        <li>업로드 파일은 로컬 실행 중 임시 폴더에서만 처리</li>
+        <li>공개 페이지는 기능 설명만 제공하고 파일 업로드 기능 제외</li>
+        <li>민감 데이터 없는 코드와 문서만 포트폴리오로 공개</li>
+      </ul>
+    </section>
+
+    <section class="section stack">
+      <p class="eyebrow">Tech Stack</p>
+      <div class="stack-list">
+        <span>Python</span>
+        <span>Streamlit</span>
+        <span>openpyxl</span>
+        <span>pypdf</span>
+        <span>ReportLab</span>
+        <span>Pillow</span>
+        <span>HTML/CSS</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AuditFlow · Portfolio case study · Local-first document automation</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

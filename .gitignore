@@ -1,0 +1,33 @@
+# Python / local runtime
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local outputs and uploads
+outputs/
+uploads/
+temp/
+tmp/
+*.log
+
+# Sensitive audit source files - never commit real club/account data
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.tsv
+~$*.xlsx
+
+# Local app settings
+.env
+.env.*
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
